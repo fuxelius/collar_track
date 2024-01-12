@@ -42,6 +42,7 @@ df_pos['color'][(df_pos['speed'] > 1)   & (df_pos['speed'] <= 3)]    = '#59981A'
 df_pos['color'][(df_pos['speed'] > 0.15) & (df_pos['speed'] <= 1)]   = '#7EC8E3' # LIGHT BLUE  Between 0.5 - 4 km/h
 df_pos['color'][(df_pos['speed'] > 0)   & (df_pos['speed'] <= 0.15)] = '#0000FF' # DARK BLUE   Slower then   0.5 km/h
 
+st.write("Streamlit Dashboard of Reindeer position by GPS")
 
 st.map(df_pos,
     latitude='lat',
