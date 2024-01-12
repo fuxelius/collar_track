@@ -46,7 +46,7 @@ df_pos['color'][(df_pos['speed'] > 0)   & (df_pos['speed'] <= 0.15)] = '#0000FF'
 
 st.title("Streamlit dashboard of reindeer position by GPS in Ståkke sami village")
 
-info = st.markdown("""|Color|Speed|
+st.markdown("""|Color|Speed|
 |------|--------------------------------------|
 |BROWN|Faster then   36 km/h, this is transport by truck!|
 |RED|Between 18  - 36 km/h|
@@ -54,10 +54,6 @@ info = st.markdown("""|Color|Speed|
 |GREEN|Between 4   - 11 km/h|
 |LIGHT BLUE|Between 0.5 - 4 km/h|
 |DARK BLUE|Slower then   0.5 km/h|""")
-
-st.sidebar.selectbox(
-    info
-)
 
 st.map(df_pos,
     latitude='lat',
