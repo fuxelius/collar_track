@@ -44,7 +44,7 @@ df_pos['color'][(df_pos['speed'] > 0)   & (df_pos['speed'] <= 0.15)] = '#0000FF'
 
 # RENDER
 
-st.title("Streamlit Dashboard of Reindeer position by GPS")
+st.title("Streamlit dashboard of reindeer position by GPS in Ståkke sami village")
 
 st.markdown("""|Color|Speed|
 |------|--------------------------------------|
