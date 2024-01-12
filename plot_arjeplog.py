@@ -42,7 +42,18 @@ df_pos['color'][(df_pos['speed'] > 1)   & (df_pos['speed'] <= 3)]    = '#59981A'
 df_pos['color'][(df_pos['speed'] > 0.15) & (df_pos['speed'] <= 1)]   = '#7EC8E3' # LIGHT BLUE  Between 0.5 - 4 km/h
 df_pos['color'][(df_pos['speed'] > 0)   & (df_pos['speed'] <= 0.15)] = '#0000FF' # DARK BLUE   Slower then   0.5 km/h
 
-st.write("Streamlit Dashboard of Reindeer position by GPS")
+# RENDER
+
+st.title("Streamlit Dashboard of Reindeer position by GPS")
+
+st.markdown("""|Color|Speed|
+|------|--------------------------------------|
+|BROWN|Faster then   36 km/h, this is transport by truck!|
+|RED|Between 18  - 36 km/h|
+|PINK|Between 11  - 18 km/h|
+|GREEN|Between 4   - 11 km/h|
+|LIGHT BLUE|Between 0.5 - 4 km/h|
+|DARK BLUE|Slower then   0.5 km/h|""")
 
 st.map(df_pos,
     latitude='lat',
