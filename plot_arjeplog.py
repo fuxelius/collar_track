@@ -62,6 +62,8 @@ st.map(df_pos,
     color='color',
     zoom=5)
 
+if st.checkbox('Show dataframe'):
+    df_pos
 
 
 
