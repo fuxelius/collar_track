@@ -21,9 +21,11 @@ import streamlit as st
 # access DB tables
 # con = sqlite3.connect("negev21_0003_20221121_1905.sqlite3")
 
-# df_pos  =  pd.read_sql_query("""SELECT lat, lon, alt, dop, speed
-#                                 FROM gps
-#                                 WHERE track_id < 3""", con)
+# df_pos  =  pd.read_sql_query("""SELECT event_time, lat, lon, alt, dop, speed
+#                                 FROM gps, event
+#                                 WHERE gps.track_id = event.track_id AND
+#                                 gps.event_id = event.event_id AND
+#                                 gps.track_id <5""", con)
 
 # con.close()
 
